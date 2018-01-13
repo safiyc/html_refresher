@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fill Out The Survey</title>
+  </head>
+  <body>
+    <h1>Please take a moment to answer the below questions:</h1>
+
+    <!-- form attribute 'action' to tell where to submit info -->
+    <form>
+      <div>
+        <label for="first-name">First Name:</label>
+        <input type="text" name="firstName" id="first-name" placeholder:"Peter">
+        <label for="last-name">Last Name:</label>
+        <input type="text" name="lastName" id="last-name" placeholder:"Parker" required>
+      </div>
+
+      <!-- difference between 'name' and 'value': when form is submitted to server, 'name' is identifier to 'value', and the actual value is 'value' -->
+      <div>
+        Hair Color:
+        <label for="choice-1">Blonde</label>
+        <input type="radio" name="radio-choice" id="choice-1" value="choice1">
+
+        <label for="choice-2">Black</label>
+        <input type="radio" name="radio-choice" id="choice-2" value="choice2">
+
+        <label for="choice-3">Purple</label>
+        <input type="radio" name="radio-choice" id="'choice-3" value="choice3">
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="abc@email.com" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="please enter password with 5 or more characters" title="error: password must be 5 or more characters!" pattern=".{5,}" required>
+      </div>
+
+      <div>
+        <label for="favorite-word">Favorite word:</label>
+        <input type="text" name="favoriteWord" id="favorite-word" placeholder="word must be 3 letters long, or between 5 and 10 letters long" title="error: enter a word 3 letters long or between 5 and 10 letters long!" pattern=".{3} | {5, 10}" required>
+        <label for="desc">Explain why it's your favorite word:</label>
+        <textarea name="favoriteWordDesc" id="desc"></textarea>
+      </div>
+
+      <div class="dropdown-sample">
+        <label for="more-questions">Select what best describes you:</label>
+        <select name="height" id="more-questions">
+          <option value="0" disabled selected>Height</option>
+          <option value="short">Short</option>
+          <option value="tall">Tall</option>
+        </select>
+
+        <select name="weight" id="more-questions">
+          <option value="0" sected disabled>Weight</option>
+          <option value="light">Light</option>
+          <option value="heavy">Heavy</option>
+        </select>
+      </div>
+
+      <div class="checkbox-sample">
+        <label for="checkbox">I agree the above answers are true to my knowledge</label>
+        <input type="checkbox" name="checkbox" id="checkbox" required>
+      </div>
+
+      <div>
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </body>
+</html>
